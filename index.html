@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ist Heute Plenum?</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.25.0"></script>		
+		<style type="text/css" media="screen">
+		p {
+			text-align: center;
+			font-size: 100px;
+		}
+		</style>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">
+		var p = d3.select("p")
+			.data([plenum()]);
+		p.enter().append("p")
+			.text(function(d) {
+					return d ? "jope" : "nope";
+			})
+			.attr("style", function(d) {
+					return d ? "color: #0F0" : "color: #F00";
+			});
+
+		function plenum(d) {
+			if(!d)
+				d = new Date();
+			
+			if (d.getDay() !=3)
+				return false;
+			var kw_start = new Date(d.getFullYear(), 0, 1);
+			var kw_offset = 1000 * 60 * 60 * 24 * ((kw_start.getDay() + 6) % 7); 
+			var day = d.getTime() - kw_start.getTime() - kw_offset;
+
+			var kw = Math.ceil(day / (1000 * 60 * 60 * 24 * 7));
+			if (kw % 3 == 0)
+				return true;
+
+			return false;
+		}
+		
+	</script>
+</body>
+</html>
