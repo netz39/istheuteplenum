@@ -5,17 +5,21 @@
     <meta charset="utf-8" />
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.25.0"></script>		
 		<style type="text/css" media="screen">
-		p {
+		h1 {
 			text-align: center;
 			font-size: 100px;
+		}
+		p {
+			text-align: center;
+			font-size: 50px;
 		}
 		</style>
 </head>
 <body>
 	<script type="text/javascript" charset="utf-8">
-		var p = d3.select("p")
+		var h1 = d3.select("h1")
 			.data([plenum()]);
-		p.enter().append("p")
+		h1.enter().append("h1")
 			.text(function(d) {
 					return d ? "jope" : "nope";
 			})
