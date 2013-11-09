@@ -28,6 +28,7 @@
 					return d ? "color: #0F0" : "color: #F00";
 			});
 
+		var title = d3.select("title").text(plenum() ? "jope" : "nope");
 		function plenum(d) {
 			if(!d)
 				d = new Date();
