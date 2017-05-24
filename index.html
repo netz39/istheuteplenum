@@ -29,23 +29,22 @@
 			});
 
 		var title = d3.select("title").text(plenum() ? "jope" : "nope");
-		function plenum(d) {
-			if(!d)
-				d = new Date();
-			
-			if (d.getDay() !=3)
-				return false;
-			var kw_start = new Date(d.getFullYear(), 0, 1);
-			var kw_offset = 1000 * 60 * 60 * 24 * ((kw_start.getDay() + 6) % 7); 
-			var day = d.getTime() - kw_start.getTime() - kw_offset;
 
-			var kw = Math.ceil(day / (1000 * 60 * 60 * 24 * 7));
-			if (kw % 3 == 0)
-				return true;
+		function plenum()
+		{
+			var d		= new Date();
+			var thursday = new Date( d.getTime() + ( 3 - ( ( d.getDay() + 6 )  % 7)) * 86400000 );
+			var weekYear = thursday.getFullYear();
 
-			return false;
+			var thursdayWeekNum =
+					new Date(
+						new Date( weekYear, 0, 4 ).getTime() +
+						( 3 - ( ( new Date( weekYear, 0, 4 ).getDay() + 6 ) % 7) ) * 86400000
+					);
+
+			var weekNum = Math.floor( 1.5 + (thursday.getTime() - thursdayWeekNum.getTime()) / 86400000 / 7 );
+			return weekNum % 3 == 0 && ( new Date() ).getDay() == 3;
 		}
-		
 	</script>
 </body>
 </html>
