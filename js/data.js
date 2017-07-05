@@ -44,6 +44,9 @@ var JSONBingo = {"squares": [
 		{"square": "3D-Drucker"},
 		{"square": "Druckertreiber"},
 		{"square": "Lötkolben"},
-		{"square": "Schließanlage"}
+		{"square": "Schließanlage"},
+		{"square": "Freifunk"},
+		{"square": "Netzwerk"},
+		{"square": "Bällebad"}
     ]
 };
