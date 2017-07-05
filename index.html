@@ -3,33 +3,10 @@
 <head>
     <title>Ist Heute Plenum?</title>
     <meta charset="utf-8" />
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.25.0"></script>		
-		<style type="text/css" media="screen">
-		h1 {
-			text-align: center;
-			font-size: 100px;
-			font-family: helvetica;
-		}
-		p {
-			text-align: center;
-			font-size: 50px;
-		}
-		</style>
-</head>
-<body>
+	<meta name="viewport" content="user-scalable=no, width=device-width">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	
 	<script type="text/javascript" charset="utf-8">
-		var h1 = d3.select("h1")
-			.data([plenum()]);
-		h1.enter().append("h1")
-			.text(function(d) {
-					return d ? "jope" : "nope";
-			})
-			.attr("style", function(d) {
-					return d ? "color: #0F0" : "color: #F00";
-			});
-
-		var title = d3.select("title").text(plenum() ? "jope" : "nope");
-
 		function plenum()
 		{
 			var d		= new Date();
@@ -45,6 +22,45 @@
 			var weekNum = Math.floor( 1.5 + (thursday.getTime() - thursdayWeekNum.getTime()) / 86400000 / 7 );
 			return weekNum % 3 == 0 && ( new Date() ).getDay() == 3;
 		}
+		
+		var isPlenum = plenum();
+		
+		var headerText = isPlenum ? 'jope' : 'nope';
+		document.title = headerText;
 	</script>
+
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.tappable.js" type="text/javascript"></script>
+	<script src="js/data.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	
+	<style type="text/css" media="screen">
+		h1 {
+			text-align: center;
+			font-size: 100px;
+			font-family: helvetica;
+		}
+		p {
+			text-align: center;
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+
+<div id="container">
+	<div id="header"></div>
+	<div id="board"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+	if( !isPlenum ) {
+		document.getElementById( 'board' ).style.display = 'none';
+		document.getElementById( 'footer' ).style.display = 'none';
+	}
+	
+	document.getElementById( 'header' ).style.color = isPlenum ? '#009900' : '#990000';
+</script>
 </body>
 </html>
