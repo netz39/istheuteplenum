@@ -32,7 +32,7 @@ var JSONBingo = {"squares": [
 		{"square": "nicht ins Protokoll"},
 		{"square": "Sammeln wir das irgendwo?"},
 		{"square": "Können wir das kurz abschließen?"},
-		{"square": "Mailingliste"},
+		{"square": "Mailing-liste"},
 		{"square": "liegt auf GitHub"},
 		{"square": "Pull Request"},
 		{"square": "Bingo!"},
@@ -42,11 +42,12 @@ var JSONBingo = {"squares": [
 		{"square": "Fefe"},
 		{"square": "Fräse"},
 		{"square": "3D-Drucker"},
-		{"square": "Druckertreiber"},
+		{"square": "Drucker-treiber"},
 		{"square": "Lötkolben"},
-		{"square": "Schließanlage"},
+		{"square": "Schließ-anlage"},
 		{"square": "Freifunk"},
 		{"square": "Netzwerk"},
-		{"square": "Bällebad"}
+		{"square": "Bällebad"},
+		{"square": "Cyber*"}
     ]
 };
