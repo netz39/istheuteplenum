@@ -31,6 +31,10 @@ var JSONBingo = {"squares": [
 		{"square": "Tschunk"},
 		{"square": "nicht ins Protokoll"},
 		{"square": "Sammeln wir das irgendwo?"},
-		{"square": "Können wir das kurz abschließen?"}
+		{"square": "Können wir das kurz abschließen?"},
+		{"square": "Mailingliste"},
+		{"square": "liegt auf GitHub"},
+		{"square": "Pull Request"},
+		{"square": "Bingo!"}
     ]
 };
