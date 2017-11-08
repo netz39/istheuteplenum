@@ -48,6 +48,8 @@ var JSONBingo = {"squares": [
 		{"square": "Freifunk"},
 		{"square": "Netzwerk"},
 		{"square": "Bällebad"},
-		{"square": "Cyber*"}
+		{"square": "Cyber*"},
+		{"square": "Webseite"},
+		{"square": "Blogeintrag"}
     ]
 };
