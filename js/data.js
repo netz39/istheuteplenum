@@ -8,14 +8,14 @@ var winSnd = new Audio("audio/win.mp3");
 
 var JSONBingo = {"squares": [
         {"square": "LDAP"},
-        {"square": "Todo"},
+        {"square": "TODO"},
         {"square": "jemand"},
         {"square": "&trade;"},
         {"square": "Soljanka"},
         {"square": "Außenschild"},
         {"square": "Umzug"},
         {"square": "Volksbank"},
-        {"square": "IOT"},
+        {"square": "IoT"},
         {"square": "sonoff"},
         {"square": "ranziger Würfel"},
 		{"square": "aufräumen"},
@@ -26,7 +26,7 @@ var JSONBingo = {"squares": [
 		{"square": "nächstes Plenum"},
 		{"square": "siffig"},
 		{"square": "Können wir das später diskutieren?"},
-		{"square": "Fnord"},
+		{"square": "FNord"},
 		{"square": "bürgerliche Kategorien"},
 		{"square": "Tschunk"},
 		{"square": "nicht ins Protokoll"},
@@ -49,6 +49,8 @@ var JSONBingo = {"squares": [
 		{"square": "Netzwerk"},
 		{"square": "Bällebad"},
 		{"square": "Cyber*"},
+        {"square": "Hackathon"},
+        {"square": "Update"},
 		{"square": "Webseite"},
 		{"square": "Blogeintrag"}
     ]
