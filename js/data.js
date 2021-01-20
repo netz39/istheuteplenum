@@ -15,7 +15,7 @@ var JSONBingo = {
         {"square": "Soljanka"},
         {"square": "Außenschild"},
         {"square": "Umzug"},
-        {"square": "Volksbank"},
+        {"square": "GLS-Bank"},
         {"square": "IoT"},
         {"square": "sonoff"},
         {"square": "ranziger Würfel"},
