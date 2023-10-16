@@ -36,7 +36,7 @@ jobs:
     needs:
       - date
     steps:
-      - uses: cstuder/apprise-ga@v3.0.1
+      - uses: cstuder/apprise-ga@v3.0.2
         with:
           title: "Netz39-Stammtisch am kommenden Mittwoch (${{ needs.date.outputs.next_date }}) um 19:30 Uhr!"          
           message: "Folgende Themen werden besprochen: https://wiki.netz39.de/stammtisch:${{ needs.date.outputs.next_date_year }}:${{ needs.date.outputs.next_date_iso }}"
@@ -49,7 +49,7 @@ jobs:
     needs:
       - date
     steps:
-      - uses: cstuder/apprise-ga@v3.0.1
+      - uses: cstuder/apprise-ga@v3.0.2
         with:
           title: "Netz39-Stammtisch am kommenden Mittwoch (${{ needs.date.outputs.next_date }})"
           message: |-
