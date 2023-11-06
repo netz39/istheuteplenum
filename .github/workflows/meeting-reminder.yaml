@@ -55,9 +55,12 @@ jobs:
           message: |-
             Hallo Leute,
 
-            am kommenden Mittwoch (${{ needs.date.outputs.next_date }}) findet um 19:30 unser nächster Netz39-Stammtisch in unseren Vereinsräumlichkeiten (Leibnizstraße 32) statt! Folgende Themen werden besprochen: https://wiki.netz39.de/stammtisch:${{ needs.date.outputs.next_date_year }}:${{ needs.date.outputs.next_date_iso }}
+            am kommenden Mittwoch (${{ needs.date.outputs.next_date }}) findet um 19:30 unser nächster Netz39-Stammtisch
+            in unseren Vereinsräumlichkeiten (Leibnizstraße 32) statt!  Folgende Themen
+            werden besprochen: https://wiki.netz39.de/stammtisch:${{ needs.date.outputs.next_date_year }}:${{ needs.date.outputs.next_date_iso }}
 
-            Falls ihr hybrid teilnehmen möchtet, gebt uns bitte bis 2h vorher Bescheid, indem du auf diese Mail antwortetst. Dann kümmern wir uns um die Online-Variante.
+            Falls ihr hybrid teilnehmen möchtet, gebt uns bitte bis 2h vorher Bescheid,
+            indem du auf diese Mail antwortetst.  Dann kümmern wir uns um die Online-Variante.
 
             Viele Grüße,
             das Netz39-Team
