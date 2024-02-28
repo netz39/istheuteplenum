@@ -20,7 +20,7 @@ jobs:
           echo "next_date_iso=$next_date_iso" >> "$GITHUB_OUTPUT"
           echo "next_date_year=$next_date_year" >> "$GITHUB_OUTPUT"
           next_date_week=$(date -d "next Wednesday" "+%V")
-          if [[ $(($next_date_week % 3)) != 0 ]];
+          if [[ $((10#$next_date_week % 3)) != 0 ]];
           then
             echo "::notice::Wrong week, skip sending reminder."
             exit 1
